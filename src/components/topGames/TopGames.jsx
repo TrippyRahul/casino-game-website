@@ -16,14 +16,14 @@ const topGamesData = [
     name: "slot-game",
     img: "/slot-game.png",
     alt: "slot-game",
-    src: "/games/slot/dist/index.html",
+    src: "/games/slotGame/index.html",
   },
   {
     id: 3,
     name: "deno-game",
     img: "/deno-game.png",
     alt: "deno-game",
-    src: "/games/slot/dist/index.html",
+    src: "/games/slotGame/index.html",
   },
 ];
 
