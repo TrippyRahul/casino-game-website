@@ -2,8 +2,6 @@ import React from "react";
 import "./topGames.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../utils/AuthContext";
-import LoginPopup from "../loginPopup/LoginPopup";
-import { useSelector } from "react-redux";
 
 const topGamesData = [
   {
