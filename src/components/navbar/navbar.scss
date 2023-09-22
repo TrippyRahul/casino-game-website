@@ -1,0 +1,225 @@
+$small : 600px;
+$medium : 768px;
+$large : 992px;
+
+
+@mixin for-small{
+    @media only screen and (max-width: $small) {
+        @content
+      }  
+}
+
+@mixin for-medium{
+    @media only screen and (max-width: $medium) {
+        @content
+      }  
+}
+
+@mixin for-large{
+    @media only screen and (max-width: $large) {
+        @content
+      }  
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.123);
+   
+    
+    .container{
+        width: 100%;
+        
+        .top{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 7rem;
+
+            @include for-small{
+                padding: 0rem 2rem;
+            }
+
+            .left{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10rem;
+                li{
+                    
+                    img{
+                        width: 14.2rem;
+                        mix-blend-mode:difference;
+                        cursor: pointer;
+                    }
+
+                }
+            }
+
+            .right{
+                .form{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 2rem;
+                    justify-content: flex-end;
+
+                    .input{
+                        background:transparent;
+                        border-radius: 3rem;
+                        border: 1px solid rgba(255, 255, 255, 0.253);
+                        display: flex;
+                        align-items: center;
+                        justify-items: center;
+                        gap: .5rem;
+                        width: 25%;
+
+                        .icon{
+                            color: rgba(255, 255, 255, 0.178);
+                        }
+
+                        input{
+                            width: 100%;
+                            height: 100%;
+                            padding:.5rem 1.5rem;
+
+                            border: none;
+                            outline: none;
+                            // padding: .5rem;
+                            background: transparent;
+                            color: white;
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    .btn{
+                        button{
+                            padding:.5rem 2rem;
+                            border-radius: 3rem;
+                            cursor: pointer;
+                            border: none;
+                            font-size: 1.5rem;
+                            background-color: #bf09bd;
+                            color: white;
+                            font-weight: bold;
+                        }
+                    }
+                }
+                // @include for-medium{
+                //     display: none;
+                // }
+            }
+
+            .log-out{
+                button{
+                        padding:.5rem 2rem;
+                        border-radius: 3rem;
+                        cursor: pointer;
+                        border: none;
+                        font-size: 1.5rem;
+                        background-color: #bf09bd;
+                        color: white;
+                        font-weight: bold;
+                    }
+            }
+
+            .mobile-menu-btn{
+               
+                display: none;
+
+                // @include for-medium{
+
+                //     z-index: 9999;
+                //     cursor: pointer;
+                //     width: 30px;
+                //     height: 20px;
+                //     display: flex;
+                //     flex-direction: column;
+                //     justify-content: space-between;
+    
+                //     span{
+                //         background-color: #fff;
+                //         height: .3rem;
+                //         transition: .2s all ease-in-out;
+                //     }
+                // }
+
+            }
+
+            .opened{
+                span{
+                    background-color: #111;
+                }
+
+                &>:first-child{
+                    transform: translateY(9px) rotate(45deg);
+                }
+
+                &>:nth-child(2){
+                    display: none;
+                }
+
+                &>:last-child{
+                    transform: translateY(-8px) rotate(-45deg);
+                }
+            }
+            
+        }
+
+        .mobile-menu{           
+           
+            display: none;
+
+                @include for-medium{
+
+                    height: 100vh;
+                    display: flex;
+                    align-self: center;
+                    justify-content: flex-end;
+                    position:fixed;
+                    z-index: 999;
+                    width: 100%;
+                    top: 0;
+                    background-color: #0000006b;
+                    transition: .2s all ease-in-out;
+        
+                    &-container{
+                        width: 40%;
+                        height: 100%;
+                        background-color: #fff;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        // justify-content: center;
+                        padding-top: 10rem;
+                        transition: .2s all ease-in-out;
+
+                        @include for-small{
+                            width: 100%;
+                        }
+
+        
+                        ul{
+                            width: 70%;
+                            li{
+                                color: #111;
+                                padding: .8rem 1rem;
+                                font-size: 2rem;
+                                border-bottom: .1rem solid black;
+                                transition: .2s all ease-in-out;
+                                cursor: pointer;
+        
+                                &:hover{
+                                    color:#345c87;
+                                }
+                            }
+                        }
+        
+                    }
+        
+                }
+        }
+    }
+
+}
