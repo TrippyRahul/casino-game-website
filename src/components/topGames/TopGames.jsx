@@ -25,7 +25,7 @@ const topGamesData = [
     name: "deno-game",
     img: "/deno-game.png",
     alt: "deno-game",
-    src: "/games/slotGame/index.html",
+    src: "/games/slot/dist/index.html",
   },
 ];
 
