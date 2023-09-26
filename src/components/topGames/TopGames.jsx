@@ -8,22 +8,62 @@ const topGamesData = [
     id: 1,
     name: "keno-game",
     img: "/keno-game.png",
-    alt: "Keno-game",
     src: "/games/kenoGame/index.html",
   },
   {
     id: 2,
     name: "slot-game",
     img: "/slot-game.png",
-    alt: "slot-game",
     src: "/games/slotGame/index.html",
   },
+
   {
-    id: 3,
-    name: "deno-game",
-    img: "/deno-game.png",
-    alt: "deno-game",
-    src: "/games/slotGame/index.html",
+    id: 4,
+    name: "mega-fortune",
+    img: "/mega-fortune.png",
+    src: "/games/megaFortune/index.html",
+  },
+  {
+    id: 5,
+    name: "buffalo-king",
+    img: "/buffalo-king.png",
+    src: "/games/buffaloKing/index.html",
+  },
+  {
+    id: 6,
+    name: "regal-riches",
+    img: "/regal-riches.png",
+    src: "/games/regalRiches/index.html",
+  },
+  {
+    id: 7,
+    name: "golden-dragon",
+    img: "/golden-dragon.png",
+    src: "/games/goldenDragon/index.html",
+  },
+  {
+    id: 8,
+    name: "planet-invaders",
+    img: "/planet-invaders.png",
+    src: "/games/planetInvaders/index.html",
+  },
+  {
+    id: 9,
+    name: "fruit-slots",
+    img: "/fruits-slots.png",
+    src: "/games/fruitSlots/index.html",
+  },
+  {
+    id: 10,
+    name: "cleopatra",
+    img: "/cleopatra.png",
+    src: "/games/cleopatra/index.html",
+  },
+  {
+    id: 11,
+    name: "blood-eternals",
+    img: "/blood-eternals.png",
+    src: "/games/bloodEternals/index.html",
   },
 ];
 
@@ -59,7 +99,7 @@ const TopGames = () => {
                   onClick={() => handleNavigate(game)}
                 >
                   <div className="img">
-                    <img src={game.img} alt={game.alt} />
+                    <img src={game.img} alt={game.name} />
                   </div>
                 </div>
               ))}
