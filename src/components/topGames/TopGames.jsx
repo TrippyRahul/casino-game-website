@@ -10,12 +10,6 @@ const topGamesData = [
     img: "/keno-game.png",
     src: "/games/kenoGame/index.html",
   },
-  {
-    id: 2,
-    name: "slot-game",
-    img: "/slot-game.png",
-    src: "/games/slotGame/index.html",
-  },
 
   {
     id: 4,
